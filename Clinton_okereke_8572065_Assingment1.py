@@ -1,9 +1,9 @@
-print("This program is to help with the accurate calculation of clothing in addy's merchandzing store.")
+print("Welcome to addy's merchandzing store.")
 
 Type= str(input('Do you want a polo or a T-shirt? press "1" for a polo and "A" for a T-shirt.'))
-
 if Type .isalpha():
-    print("YOU HAVE SELECTED A 'T-SHIRT'. ")
+    print("You have selected a polo")
+    
 elif Type .isdigit():
     print("YOU HAVE SELECTED A 'POLO'. ")    
 
