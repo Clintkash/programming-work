@@ -11,3 +11,10 @@ quantity= int(input())
 print("The type of shirt you want is A " +str (Type))
 print('The colour is ' +str (Colour))
 print('The quantity you wish to buy is ' +str (quantity))
+
+price=9.99
+subtotal= price*(quantity)
+print("The subtotal is " +str (subtotal))
+
+
+HST= 0.13*(subtotal)
