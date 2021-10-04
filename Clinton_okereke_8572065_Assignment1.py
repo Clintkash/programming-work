@@ -22,6 +22,6 @@ print('HST is ' +str (HST))
 
 
 TOTAL=subtotal+ HST
-print("TOTAL is " +str (TOTAL))
+print("TOTAL is " +str  (TOTAL))
 
 print('THANK YOU FOR SHOPPING WITH US SEE YOU NEXT TIME.')
