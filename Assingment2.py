@@ -77,3 +77,40 @@ if Trousers==1:
     print('You have selected a Jean')
 elif Trousers==2:
     print("You have selected a sweat pant")
+
+print('The colour of shirt is ' +str (colour))
+print('The colour of trouser is ' +str (Colour))
+print('THE SENIOR/STUDENT DISCOUNT ONLY APPLIES FOR THE SHIRTS AND THE 15% DISCOUNT APPLIES ONLY WHEN YOU PURCHASE THREE(3) OR MORE TROUSERS FOR THE TROUSERES ALONE :)')
+
+
+priceofshirts= 9.99
+priceofjeans= 20.00
+priceofsweatpants= 25
+discountofmorethanthreetrousers= 0.85
+discountofage=0.9
+discountofboth=0.75
+#HST= 0.13
+
+priceofshirts= 9.99
+subtotal= priceofshirts*(Quantityofshirts)
+print("The subtotal is " +str (subtotal))
+HST=0.13*(subtotal)
+format_HST= "{:.2F}".format(HST)
+print('HST is ' +format_HST)
+
+shirt=subtotal+ HST
+format_shirt= "{:.2f}".format(shirt)
+print("TOTAL is " +str  (format_shirt) + ' for the shirts')
+
+if Trousers==1:
+    priceofjeans= 20.00
+subtotal1=priceofjeans*(Quantityoftrousers)
+print('The subtotal is ' +str  (subtotal1))    
+HST=0.13*(subtotal1)
+format_HST= "{:.2F}".format(HST)
+print("HST is " +format_HST)  
+
+jeans=subtotal1+HST
+format_jeans= "{:.2f}".format(jeans)
+print('Total is ' +str (format_jeans) + ' for the jean type of trouser')
+
