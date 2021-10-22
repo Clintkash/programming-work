@@ -20,3 +20,33 @@ Trousers= int(input('Please press 1 for jeans and 2 for sweat pants: '))
 
 if Trousers==1:
     print('You have selected a Jean')
+elif Trousers==2:
+    print("You have selected a sweat pant")
+elif Trousers!=1 and Trousers!=2:
+    print('ERROR!!!...... YOU HAVE TO PRESS 1 OR 2 TO CHOOSE')
+
+colour= str(input('Please type in the colour you want, all colours are available for our shirts.: '))
+
+print('WE ONLY HAVE THREE COLOURS AVAILABE FOR OUR TROUSERS BELOW ARE THE AVAILABLE COLOURS.')
+for types in 'BLUE', 'RED', 'WHITE':
+    print(types) 
+
+Colour= str(input('PLEASE RED BLUE OR WHITE FOR TROUSER COLOUR.: '))
+
+if Colour== 'RED' or Colour== 'red':
+        print('You have selected red colour for your trouser of choice')
+elif Colour== 'BLUE' or Colour== 'blue':
+        print('You have selected a Blue colour for your trouser of choice')
+elif Colour== 'WHITE' or Colour== 'white':
+        print('You have selected a white colour for your trouser of choice')
+else:
+    print(" ERROR!!!.... The colour you selected is not available please try again")
+
+if Type==1:
+    print('You have selected a ' +str(colour) + ' POLO')
+elif Type==2:
+    print('You have selected a ' +str (colour) + ' T-shirt')
+elif Trousers==1:
+    print('You have selected a ' +str (Colour) + ' jeans')
+if Trousers==2:
+    print('You have selected a ' +str (Colour) + ' Sweat Pants')
