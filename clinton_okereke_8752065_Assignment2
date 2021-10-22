@@ -1,0 +1,22 @@
+print(' WELCOME TO ABBYS CLOTHING')
+print('**************************************************************************')
+print('BELOW ARE THE LIST OF ITEMS WE HAVE IN OUR STORE AND THERE PRICES')
+for items in 'POLO=$9.99', 'T-SHIRT=$9.99', 'JEANS=$20', 'SWEAT PANTS=$20':
+    print(items)
+
+Type=1
+Trousers=1
+
+Type= int(input('please press 1 for polo and 2 for T-shirt: '))
+
+if Type==1:
+    print('You have selected a POLO')
+elif Type==2:
+    print('You have selected a T-shirt')
+elif Type !=1 and Type!=2:
+     print ('ERROR!!!!!...........please press 1 for polo and 2 for T-shirt.' )
+
+Trousers= int(input('Please press 1 for jeans and 2 for sweat pants: '))
+
+if Trousers==1:
+    print('You have selected a Jean')
