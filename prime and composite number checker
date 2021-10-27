@@ -1,0 +1,23 @@
+from typing import type_check_only
+
+
+prime_count=0
+composite_count=0
+print('Welcome to the prime and composite checker, to exix program, press -1. ')
+
+a=int(input('Please input a number: '))
+while (a!=-1):
+    flag = 0
+    for x in range(2,a):
+        if(a % x == 0):
+            flag = 1
+            break
+    if (flag == 0):
+        prime_count = prime_count +1
+    else:
+        composite_count=   composite_count +1
+    a = int(input('please enter a number: '))
+print('The number of prime numbers entered is: ', prime_count)
+print('The number of composite numbers entered is: ', composite_count) 
+
+#This code/program is to calculate the number of prime and composite numbers entred.

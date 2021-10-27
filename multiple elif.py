@@ -5,9 +5,9 @@ if x < 0:
     print('the number you entered is a negative number')
 
 elif x == 0:
-  print('the nnumber you entered id a zero')
+  print('the nnumber you entered iS zero')
 elif x== 1:
-    print('the number you entered is a 1')
+    print('the number you entered is a One')
 elif x== 2:
-    print('the number you entered is a two')    
+    print('the number you entered is a Two')    
     

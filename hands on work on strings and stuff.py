@@ -2,7 +2,7 @@ x = str(input('please input character.'))
 
 if x .isalpha():
     print('A letter was entered')
-elif x .isdigit('1'):
+elif x .isdigit():
     print('A digit was entered')
 elif x .isspace():
     print('A space was entered')
