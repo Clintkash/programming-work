@@ -1,0 +1,102 @@
+import random
+#Hero classes for the game.
+class warrior (object):
+    health = 200
+    defence = 80
+    strength = 70
+    magic = 10
+
+class elf (object):
+    health = 150
+    defence = 78
+    strength = 55
+    magic = 70
+
+class wizard (object):
+    health = 100
+    defence = 60
+    strength = 30
+    magic = 200
+
+
+
+#enemy classes
+
+class goblin(object):
+    name = 'Goblin'
+    health = 50
+    defence = 20
+    strength = 10
+    loot = random.randint(0,3)
+
+class wolf(object):
+    name = 'Wolf'
+    health = 60
+    defence = 20
+    strength = 25
+    loot = random.randint(0,3)
+
+class orc(object):
+    name = 'Orc'
+    health = 70
+    defence = 30
+    strength = 40
+    loot = random.randint(0,3)
+
+class bat (object):
+    name = 'Bat'
+    health = 15
+    defence = 5
+    strength = 10
+    loot = random.randint(0,3)
+
+class beast (object):
+    name = 'Beast'
+    health = 75
+    defence = 35
+    strength = 50
+    loot = random.randint(0,3)
+
+def selecthero():
+    print('SELECT YOUR HERO!!')
+    selection= input('1. Warrior. \n2. Elf. \n3. Wizard.\n')
+    if selection == '1':
+        character=warrior
+        print('YOU HAVE SELECTED A WARRIOR BELOW ARE THEIR ATTRIBUTES, AND GOODLUCK :) ')
+        print('Health - ', character.health)
+        print('Defence - ', character.defence)
+        print('Strength - ', character.strength)
+        print('Magic - ', character.magic)
+        return character
+    elif selection == '2':
+        character=elf
+        print('YOU HAVE SELECTED AN ELF BELOW ARE THEIR ATTRIBUTES, AND GOODLUCK :) ')
+        print('Health - ', character.health)
+        print('Defence - ', character.defence)
+        print('Strength - ', character.strength)
+        print('Magic - ', character.magic)
+        return character
+
+    elif selection == '3':
+        character=wizard
+        print('YOU HAVE SELECTED A WIZARD BELOW ARE THEIR ATTRIBUTES, AND GOODLUCK :) ')
+        print('Health - ', character.health)
+        print('Defence - ', character.defence)
+        print('Strength - ', character.strength)
+        print('Magic - ', character.magic)
+        return character
+    else:
+        print('ERROR!!!! PLEASE ENTER ONLY 1,2 OR 3 :) ')
+        selecthero()
+
+def selectenemy(goblin, wolf, orc, bat, beast):
+    listofenemies=[goblin, wolf, orc, bat, beast]
+    chance= random.randit(0,4)
+    enemy=listofenemies[chance]
+    return enemy
+
+def loot():
+    loot=['Healthpotion', 'Strengthpotion', 'Defencepotion', 'Shield']
+    lootchance= random.randint(0,3)
+    lootdrop=loot[lootchance]
+    return lootdrop
