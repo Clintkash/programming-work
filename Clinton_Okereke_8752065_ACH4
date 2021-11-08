@@ -1,0 +1,59 @@
+print('THIS IS A MINI CALCULATOR THAT DOES SOME BASIC CALCULATIONS LIKE ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION AND MODULUS DIVISION OF NUMBERS.')
+print("***********************************************")
+print('BELOW ARE THE LIST OF OPERATIONS YOU CAN DO PRESS THE FOLLOWING NUMBERS TO PERFORM ANY OPERATION OF YOUR CHOICE.')
+for operations in 'FOR ADDITION, PRESS 1', 'FOR SUBTRACTION, PRESS 2', 'FOR MULTIPLICATION, PRESS 3', 'FOR DIVISION, PRESS 4', 'FOR MODULUS DIVISION,PRESS 5':
+  print(operations)
+
+class Calculator:
+        def __init__(self, firstnumber, secondnumber):
+            self.firstnumber=firstnumber
+            self.secondnumber=secondnumber
+
+        def addition(self):
+            sum= self.firstnumber+ self.secondnumber
+            print(sum)
+            print('The sum of ', self.firstnumber ,' and ' , self.secondnumber, 'is ', sum)
+
+
+        def subtraction(self):
+            difference= self.firstnumber- self.secondnumber
+            print(difference)
+            print('The difference of ', self.firstnumber ,' and ' , self.secondnumber, 'is ', difference)
+
+
+        def multiplication(self):
+            product= self.firstnumber*self.secondnumber
+            print(product)
+            print( self.firstnumber ,' multiplied by ' , self.secondnumber, 'is ', product)
+
+
+        def division(self):
+            result= self.firstnumber/ self.secondnumber
+            print (result)
+            print( self.firstnumber ,' divided by ' , self.secondnumber, 'is ', result)
+
+
+
+        def modulusDivision (self):
+            answer= self.firstnumber%self.secondnumber
+            print(answer)
+            print('The modulus division of ', self.firstnumber ,' and ' , self.secondnumber, 'is ', answer)
+
+Option=int(input('INPUT THE NUMBER YOU WANT BASED ON THE OPERATION YOU WISH TO PERFORM: '))
+
+a=int(input('Please input the first number: '))
+b=int(input('Please enter the second number: '))
+RESULT= Calculator(a,b)
+if Option==1:
+    RESULT.addition()
+elif Option==2:
+    RESULT.subtraction()
+elif Option==3:
+    RESULT.multiplication()
+elif Option==4:
+   RESULT.division()
+elif Option==5:
+    RESULT.modulusDivision()
+else:
+    print('ERROR!!!!!!! You have entred a wrong operation.....')
+print("THANK YOU FOR USING CLINT'S CALCULATOR :) ")
