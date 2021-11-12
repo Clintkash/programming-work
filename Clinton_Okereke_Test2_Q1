@@ -1,0 +1,8 @@
+def Factorial():
+    a=int(input('Please enter a positive integer: '))
+    product=1
+    for i in range (a):
+        product=product * (i+1)
+    print ('The Factorial of ', a, ' is ', product)
+
+Factorial()
