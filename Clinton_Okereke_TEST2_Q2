@@ -1,0 +1,17 @@
+class LargestValue:
+    def __init__ (self, firstnumber, secondnumber, thirdnumber):
+        self.firstnumber=firstnumber
+        self.secondnumber=secondnumber
+        self.thirdnumber=thirdnumber
+
+    def maxValue(self):
+        list = [self.firstnumber, self.secondnumber, self.thirdnumber]
+        print( 'The largest number of the three numbers you entred is ', max(list))
+
+a=int(input('Please input your first number: '))
+b=int(input('Please input your second number: '))
+c=int(input('Please input your third number: '))
+
+RESULT=LargestValue(a,b,c)
+RESULT.maxValue()
+#THIS CODE PRINTS THE LARGEST NUMBER OF ANY NUMBER ENTRED.
