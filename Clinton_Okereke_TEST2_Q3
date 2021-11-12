@@ -1,0 +1,34 @@
+class Account:
+    def __init__(self, putmoney):#takemoney, keepmoney):
+        self.putmoney=putmoney
+        #self.takemoney=takemoney
+        #self.keepmoney= keepmoney
+
+    def deposit(self):
+        print('YOUR INITIAL DEPOSIT OF $', self.putmoney, 'WAS SUCCESSFUL. \n YOUR BALANCE IS $', self.putmoney)
+
+    
+
+    def withdrawal(self):
+        a=int(input('PRESS 1 FOR WITHDRAWAL. \nPRESS 2 FOR DEPOSIT\nPRESS 3 TO END TRANSACTION\n'))
+        if a == 1:
+            b=int(input('Please type in the amount you want to withdraw :) '))
+            print('YOUR WITHDRAWAL OF $',b, 'WAS SUCESSFUL\nYOUR REMANING BALANCE IS $',self.putmoney-b)
+            if b > self.putmoney:
+                print('INSUFFICIENT FUND PLEASE TRY AGAIN!!! \n Your available balance is $', self.putmoney)
+                
+        elif a == 2:
+            c=int(input('HOW MUCH DO YOU WANT TO DEPOSIT TODAY?'))
+            print('YOU DEPOSITED THE AMOUNT OF $',c , '\nYOUR TOTAL BALANCE IS $',c+self.putmoney)
+        elif a==3:
+            print('THANK YOU FOR BANKING WITH US AND ALSO CHOOSING CIBC :)')
+
+    
+
+
+x=float(input('PLEASE ENTER THE AMOUNT YOU WANT TO DEPOSIT: '))
+format_x = '{:.2f}'.format(x)
+print(format_x)
+RESULT=Account(x)
+RESULT.deposit()
+RESULT.withdrawal()
