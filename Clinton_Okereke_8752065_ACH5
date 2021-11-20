@@ -9,3 +9,9 @@ print('found', len(findallDigits), 'matches of digits')
 
 findallAlphanumerics = re.findall('\w', source) 
 print('found ',len (findallAlphanumerics), 'matches of alphanumeric characters')
+
+findallNonAlphanumerics = re.findall('\W', source) 
+print('found ',len (findallNonAlphanumerics), 'matches of Non-alphanumeric characters')
+
+findallspaces= re.findall('\s', source) 
+print('found ',len (findallspaces), 'matches of spaces')
