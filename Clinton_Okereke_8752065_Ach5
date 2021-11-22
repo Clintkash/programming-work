@@ -1,0 +1,17 @@
+import re
+source = "Clinton Okereke 8752065 Lorem ipsum doflor szit ametß, consqecytetu$r  adipibsching elit, sed do eiusmod tewmporα incid6kgidunt ut labq8ore et café dolore_ magna aliqua. Purus! sit{|}~ \t\n\r\x0b\x0c amet volutpat cons&jequat mau7ris. Penaxtibus et"
+
+findalltheC=re.findall('f', source)
+print('Found ', len(findalltheC), 'matches of the letter C')
+
+findallDigits= re.findall("\d", source)
+print('found', len(findallDigits), 'matches of digits')
+
+findallAlphanumerics = re.findall('\w', source) 
+print('found ',len (findallAlphanumerics), 'matches of alphanumeric characters')
+
+findallNonAlphanumerics = re.findall('\W', source) 
+print('found ',len (findallNonAlphanumerics), 'matches of Non-alphanumeric characters')
+
+findallspaces= re.findall('\s', source) 
+print('found ',len (findallspaces), 'matches of spaces')
