@@ -1,0 +1,56 @@
+print(' WELCOME TO ABBYS CLOTHING')
+print('**************************************************************************')
+print('BELOW ARE THE LIST OF ITEMS WE HAVE IN OUR STORE AND THERE PRICES')
+
+class Shirts:
+    def __init__ (self,shirttype,shirtcolour):
+        self.shirttype=shirttype
+        self.shirtcolour=shirtcolour
+
+class Trousers:
+    def __init__(self,trousertype, trousercolour):
+        self.trousertype=trousertype
+        self.trousercolour=trousercolour
+
+
+
+for items in 'POLO=$9.99', 'T-SHIRT=$9.99', 'JEANS=$20', 'SWEAT PANTS=$20':
+    print(items)
+
+Type=1
+
+Type= int(input('please press 1 for polo and 2 for T-shirt: '))
+
+if Type==1:
+    print('You have selected a polo.')
+
+elif Type==2:
+    print('You have selected a T-shirt.')
+
+elif Type!=1  and Type!=2 :
+     print ('ERROR!!!!!...........please press 1 for polo and 2 for T-shirt.' )
+
+colour= str(input('Please type in the colour you want, all colours are available: '))
+SHIRT=Shirts(Type,colour)
+
+Trousertype= int(input('Please press 1 for jeans and 2 for sweat pants: '))
+
+if Trousertype==1:
+    print('You have selected a Jean')
+elif Trousertype==2:
+    print("You have selected a sweat pant")
+elif Trousertype!=1 and Trousertype!=2:
+    print('ERROR!!!...... YOU HAVE TO PRESS 1 OR 2 TO CHOOSE')
+
+Colours= str(input('PLEASE RED BLUE OR WHITE FOR TROUSER COLOUR.: '))
+Colours=Colours.upper() or Colours.lower()
+if Colours== 'RED':
+        print('You have selected red colour for your trouser of choice')
+elif Colours== 'BLUE':
+        print('You have selected a Blue colour for your trouser of choice')
+elif Colours== 'WHITE':
+        print('You have selected a white colour for your trouser of choice')
+else:
+    print(" ERROR!!!.... The colour you selected is not available please try again")
+
+TROUSER=Trousers(Trousertype,Colours)
