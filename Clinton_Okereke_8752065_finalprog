@@ -1,0 +1,70 @@
+import random
+score = 0
+
+#Hero classes for the game.
+class warrior (object):
+    health = 10
+    defence = 40
+    strength = 25
+    magic = 10
+
+class elf (object):
+    health = 75
+    defence = 30
+    strength = 15
+    magic = 70
+
+class wizard (object):
+    health = 70
+    defence = 20
+    strength = 10
+    magic = 75
+
+
+
+#enemy classes
+
+class goblin(object):
+    name = 'Goblin'
+    health = 50
+    defence = 20
+    strength = 10
+    loot = random.randint(0,3)
+
+class wolf(object):
+    name = 'Wolf'
+    health = 60
+    defence = 20
+    strength = 25
+    loot = random.randint(0,3)
+
+class orc(object):
+    name = 'Orc'
+    health = 70
+    defence = 30
+    strength = 40
+    loot = random.randint(0,3)
+
+class bat (object):
+    name = 'Bat'
+    health = 15
+    defence = 5
+    strength = 10
+    loot = random.randint(0,3)
+
+class beast (object):
+    name = 'Beast'
+    health = 75
+    defence = 35
+    strength = 50
+    loot = random.randint(0,3)
+
+#GAME OVER FUNCTION PHEW :)
+def gameover(character,score):
+    if character.health <1:
+        print('Thanks for playing')
+        print ('GAME OVER!!!')
+        print ('YOU HAVE SCORED........', score)
+        exit ()
+
+#HERO SELECTION
