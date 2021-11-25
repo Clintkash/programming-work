@@ -76,24 +76,64 @@ if Quantityoftrousers>=3:
     print('YOU ARE QUALIFIED FOR A 15% DISCOUNT FOR PURCHASING UP TO THREE(3) TROUSERS IN OUR STORE')
 elif Quantityoftrousers<3:
     print('YOU DO NOT QUALIFY FOR THE 15% DISCOUNT')
-Trousertype= int(input('Please press 1 for jeans and 2 for sweat pants: '))
 
-if Trousertype==1:
-    print('You have selected a Jean')
-elif Trousertype==2:
-    print("You have selected a sweat pant")
-elif Trousertype!=1 and Trousertype!=2:
-    print('ERROR!!!...... YOU HAVE TO PRESS 1 OR 2 TO CHOOSE')
+def summary():
+    if Type==1:
+        print('You have bought a POLO, and the colour is ', colour, 'The quantity you bought is ', Quantityofshirts)
+    elif Type==2:
+        print('You have bought a T-shirt, and the colour is ', colour , 'The quantity you bought is ', Quantityofshirts)
+   
+    if Trousertype==1:
+        print('You have bought a Jean, and the colour is ', Colours, 'The quantity you bought is ', Quantityoftrousers)
+    elif Trousertype==2:
+        print("You have bought a sweat pant, and the colour is ", Colours, 'The quantity you bought is ', Quantityoftrousers)
 
-Colours= str(input('PLEASE RED BLUE OR WHITE FOR TROUSER COLOUR.: '))
-Colours=Colours.upper() or Colours.lower()
-if Colours== 'RED':
-        print('You have selected red colour for your trouser of choice')
-elif Colours== 'BLUE':
-        print('You have selected a Blue colour for your trouser of choice')
-elif Colours== 'WHITE':
-        print('You have selected a white colour for your trouser of choice')
+print('THE SENIOR/STUDENT DISCOUNT ONLY APPLIES FOR THE SHIRTS AND THE 15% DISCOUNT APPLIES ONLY WHEN YOU PURCHASE THREE(3) OR MORE TROUSERS FOR THE TROUSERES ALONE')
+
+class Calculate:
+    def __init__(self,shirtquantity, trouserquantity):
+       self.shirtquantity= shirtquantity
+       self.trouserquantity= trouserquantity
+
+         
+    def CalcTotal (self):
+        priceofshirts= 9.99
+        priceoftrouser= 20.00
+        subtotal=priceofshirts*self.shirtquantity
+        subtotal1=priceoftrouser*self.trouserquantity
+        Total= subtotal+subtotal1
+        format_Total="{:.2f}".format(Total)
+        print('Subtotal : $', format_Total)
+        HST=0.13*(Total)
+        format_HST="{:.2F}".format(HST)
+        print('HST IS $' ,format_HST)
+        TOTAL=HST+Total
+        format_TOTAL="{:.2f}".format(TOTAL)
+        print('Your total is $' +format_TOTAL)
+        print('Thank you for shopping with us :) ')
+    
+    def CalDiscount(self):
+        priceofshirts= 9.99
+        priceoftrouser= 20.00
+        subtotal=priceofshirts*self.shirtquantity
+        subtotal1=priceoftrouser*self.trouserquantity
+        Total= subtotal+subtotal1
+        x=Total*0.75
+        format_x="{:.2f}".format(x)
+        print('SUBTOTAL IS $' +str (format_x))
+        HST=0.13*(x)
+        format_HST="{:.2F}".format(HST)
+        print('HST IS $' +format_HST)
+        TOTAL=HST+x
+        format_TOTAL= "{:.2F}".format(TOTAL)
+        print('TOTAL IS $' +str (format_TOTAL ))
+        print('You recevied a 15 percent discount for purchasing more than 3 trousers and 10 percent discount  for the student/senior discount.')
+
+summary()
+total=Calculate(Quantityofshirts, Quantityoftrousers)
+if Quantityoftrousers>=3 :
+    total.CalDiscount()
 else:
-    print(" ERROR!!!.... The colour you selected is not available please try again")
+    total.CalcTotal()
 
-TROUSER=Trousers(Trousertype,Colours)
+print('THANK YOU FOR SHOPPING WITH US SEE YOU NEXT TIME.') 
