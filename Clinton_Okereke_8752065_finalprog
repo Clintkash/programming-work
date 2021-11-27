@@ -68,3 +68,35 @@ def gameover(character,score):
         exit ()
 
 #HERO SELECTION
+def selecthero():
+    print('SELECT YOUR HERO!!')
+    selection= input('1. Warrior. \n2. Elf. \n3. Wizard.\n')
+    if selection == '1':
+        character=warrior
+        print('YOU HAVE SELECTED A WARRIOR BELOW ARE THEIR ATTRIBUTES, AND GOODLUCK :) ')
+        print('Health - ', character.health)
+        print('Defence - ', character.defence)
+        print('Strength - ', character.strength)
+        print('Magic - ', character.magic)
+        return character
+    elif selection == '2':
+        character=elf
+        print('YOU HAVE SELECTED AN ELF BELOW ARE THEIR ATTRIBUTES, AND GOODLUCK :) ')
+        print('Health - ', character.health)
+        print('Defence - ', character.defence)
+        print('Strength - ', character.strength)
+        print('Magic - ', character.magic)
+        return character
+
+    elif selection == '3':
+        character=wizard
+        print('YOU HAVE SELECTED A WIZARD BELOW ARE THEIR ATTRIBUTES, AND GOODLUCK :) ')
+        print('Health - ', character.health)
+        print('Defence - ', character.defence)
+        print('Strength - ', character.strength)
+        print('Magic - ', character.magic)
+        return character
+    else:
+        print('ERROR!!!! PLEASE ENTER ONLY 1,2 OR 3 :) ')
+        selecthero()
+#ENEMY SELECTION IS BY RANDOM
