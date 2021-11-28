@@ -100,3 +100,40 @@ def selecthero():
         print('ERROR!!!! PLEASE ENTER ONLY 1,2 OR 3 :) ')
         selecthero()
 #ENEMY SELECTION IS BY RANDOM
+#ENEMY SELECTION IS BY RANDOM
+def selectenemy(goblin, wolf, orc, bat, beast):
+    listofenemies=[goblin, wolf, orc, bat, beast]
+    chance= random.randint(0,4)
+    enemy=listofenemies[chance]
+    return enemy
+
+def loot():
+    loot=['Healthpotion', 'Strengthpotion', 'Shield',]
+    lootchance= random.randint(0,2)
+    lootdrop=loot[lootchance]
+    return lootdrop
+
+def lootEffect(lootdrop,character):
+    if lootdrop == 'Healthpotion':
+        character.health = character.health + 10
+        print('YOU PICKED UP THE HEALTH POTION, INCREASING YOUR HEALTH BY 1O!! :)')
+        print("YOUR HEALTH IS NOW ", character.health)
+        return character
+
+    elif lootdrop == 'Strengthpotion':
+        character.strength = character.strength + 8
+        print('YOU PICKED UP THE STRENGTH POTION, INCREASING YOUR STRENGTH BY 8!! :)')
+        print("YOUR STRENGTH IS NOW ", character.strength)
+        return character
+
+    elif lootdrop == 'Shield':
+        character.defence = character.defence + 5
+        print('YOU PICKED UP A SHIELD, INCREASING YOUR DEFENCE BY 5!! :)')
+        print("YOUR DEFENCE IS NOW ", character.defence)
+        return character
+
+    elif lootdrop == 'NOTHING':
+        print('OPPS IT IS AN EMPTY BAG BETTER LUCK NEXT TIME .')
+
+
+#BATTLE STATE
