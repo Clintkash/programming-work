@@ -135,5 +135,74 @@ def lootEffect(lootdrop,character):
     elif lootdrop == 'NOTHING':
         print('OPPS IT IS AN EMPTY BAG BETTER LUCK NEXT TIME .')
 
-
 #BATTLE STATE
+def battle(score):
+    enemy=selectenemy(goblin, wolf, orc, bat, beast)
+    print("A DANGEROUS", enemy.name, 'HAS APPEARED' )
+    print('You have three(3) options, what will you do? ......')
+    while enemy.health >0:
+        option = input('1.Sword attack\n2.Magic attack\n3.RUN!!!!!\n')
+        if option == '1':
+            print('YOU ATTACKED THE', enemy.name , 'BY SWINGING YOUR SWORD.')
+            hitchance= random.randint(0,10)
+            if hitchance >3:
+                enemy.health= enemy.health-character.strength
+                print('YOU JUST HIT THE', enemy.name, 'THEY HAVE ' ,enemy.health, 'REMAINING')
+
+                if enemy.health>0:
+                    character.health= character.health -(enemy.strength/character.defence)
+                    print('THE', enemy.name, 'ATTACKED AND HITS YOU, YOU NOW HAVE', character.health, 'REAMINING')
+                    gameover(character, score)
+
+                else:
+                    if enemy.name == 'Goblin':
+                        enemy.health = 50
+                        score = score +13
+                        #return score
+
+                    elif enemy.name == 'Wolf':
+                        enemy.health = 60
+                        score = score +10
+                        #return score
+
+                    elif enemy.name == 'Orc':
+                        enemy.health = 70
+                        score = score +15
+                        #return score
+
+                    elif enemy.name == 'Bat':
+                        enemy.health = 15
+                        score = score +5
+                        #return score
+
+                    elif enemy.name == 'Beast':
+                        enemy.health = 75
+                        score = score +20
+                        #return score
+
+                    print('YOU HAVE DEFETED THE', enemy.name, )
+                    print('LOOKS LIKE IT DROPPED SOMETHING, LETS CHECK IT OUT.')
+                    lootdrop = loot()
+                    print('WOW, IT IS A ', lootdrop)
+                    lootEffect(lootdrop,character)
+                    return score
+                    break
+            else:
+                print('OUCH, YOU MISSED!!!!, CAREFUL NEXT TIME.')
+                print('THE', enemy.name, 'HITS YOU FOR FULL DAMAGE')
+                character.health = character.health -enemy.strength
+                print('YOU NOW HAVE', character.health, 'REMANING FROM YOUR HEALTH.')
+                print('BECAREFUL NEXT TIME!!!!!')
+                gameover(character, score)
+
+        elif option == '2':
+            print('YOU ATTACKED THE', enemy.name , 'BY CASTING A MAGIC SPELL.')
+            hitchance= random.randint(0,10)
+            if hitchance >2:
+                enemy.health= enemy.health-character.magic
+                print('YOU JUST HIT THE', enemy.name, 'THEY HAVE ' ,enemy.health, 'REMAINING')
+
+                if enemy.health>0:
+                    character.health= character.health -(enemy.strength/character.defence)
+                    print('THE', enemy.name, 'ATTACKED AND HITS YOU, YOU NOW HAVE', character.health, 'REAMINING')
+                    gameover(character,score)
