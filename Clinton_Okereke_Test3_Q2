@@ -1,0 +1,19 @@
+class Rectangle:
+    def __init__(self,length, width):
+        self.length=length
+        self.width=width
+
+    def getArea (self):
+        Area=self.length +self.width
+        print('THE AREA OF THE RRECTANGLE IS ',Area)
+
+    def getPerimeter (self):
+        perimeter1= self.length+self.width
+        perimeter=2*perimeter1
+        print('THE PERIMETER OF THE RRECTANGLE IS ', perimeter)
+
+length=float(input("PLEASE INPUT THE LENGTH OF THE RECTANGLE: "))
+width=float(input('PLEASE INPUT WIDTH OF THE RECTANGLE: '))
+RESULT=Rectangle(length,width)
+RESULT.getArea()
+RESULT.getPerimeter()
