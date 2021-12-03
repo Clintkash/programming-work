@@ -206,3 +206,62 @@ def battle(score):
                     character.health= character.health -(enemy.strength/character.defence)
                     print('THE', enemy.name, 'ATTACKED AND HITS YOU, YOU NOW HAVE', character.health, 'REAMINING')
                     gameover(character,score)
+
+                else:
+                    if enemy.name == 'Goblin':
+                        enemy.health = 50
+                        score = score +13
+                        #return score
+
+                    elif enemy.name == 'Wolf':
+                        enemy.health = 60
+                        score = score +10
+                        #return score
+
+                    elif enemy.name == 'Orc':
+                        enemy.health = 70
+                        score = score +15
+                        #return score
+
+                    elif enemy.name == 'Bat':
+                        enemy.health = 15
+                        score = score +5
+                        #return score
+
+                    elif enemy.name == 'Beast':
+                        enemy.health = 75
+                        score = score +20
+                        #return score
+
+                    print('YOU HAVE DEFETED THE', enemy.name, )
+                    print('LOOKS LIKE IT DROPPED SOMETHING, LETS CHECK IT OUT.')
+                    lootdrop = loot()
+                    print('WOW, IT IS A ', lootdrop)
+                    lootEffect(lootdrop,character)
+                    return score
+                    break
+
+            else:
+                print('OUCH, YOU MISSED!!!! HOW CAN YOU MISS A MAGIC SPELL?, CAREFUL NEXT TIME.')
+                print('THE', enemy.name, 'HITS YOU FOR FULL DAMAGE')
+                character.health = character.health -enemy.strength
+                print('YOU NOW HAVE', character.health, 'HP REMANING.')
+                print('BECAREFUL NEXT TIME!!!!!')
+                gameover(character, score)
+
+        elif option == '3':
+            print('YOU TRY TO RUN AWAY.......')
+            runchance= random.randint(2,10)
+            if runchance> 4:
+                print('YOU RAN AWAY FROM THE', enemy.name, 'WITHOUT BEEN NOTICED.')
+                break
+            else:
+                print('YOU TRIED TO RUN, BUT THE', enemy.name, 'CAUGHT UP WITH YOU BECAUSE YOU FELL')
+                print('YOU TRIED TO DEFEND YOURSELF, BUT CANNOT AND THE', enemy.name, 'HIT YOU FOR FULL DAMAGE :(')
+                character.health = character.health -enemy.strength
+                print('YOUR HEALTH IS NOW ', character.health, 'HP')
+                gameover(character, score)
+        else:
+            print('ERROR!!!... INVALID INPUT, PLEASE ENTER "1", "2" OR "3".')
+
+character=selecthero()
