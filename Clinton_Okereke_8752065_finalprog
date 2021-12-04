@@ -32,7 +32,7 @@ class goblin(object):
     loot = random.randint(0,3)
 
 class wolf(object):
-    name = 'Wolf'
+    name = 'Wolf'  #ilove wolves hahaha
     health = 60
     defence = 20
     strength = 25
